@@ -11,10 +11,12 @@ public class StrategyPattern : IPattern
         var expressShipping = new ExpressShipping();
         
         var electronicOrder = new ElectronicOrder(100, commonShipping);
-        Console.WriteLine(electronicOrder.SectorName + $" | {nameof(electronicOrder.ShippingMethod)}" +" | Order Shipping Cost: " + electronicOrder.CalculateShippingCost());
+        Console.WriteLine(electronicOrder.SectorName + $" | {electronicOrder.ShippingMethod.GetType().Name}" +" | Order Shipping Cost: " + electronicOrder.CalculateShippingCost());
         
         electronicOrder.SetShippingMethod(expressShipping);
-        Console.WriteLine(electronicOrder.SectorName + $" | {nameof(electronicOrder.ShippingMethod)}" +" | Order Shipping Cost: " + electronicOrder.CalculateShippingCost());
-        
+        Console.WriteLine(electronicOrder.SectorName + $" | {electronicOrder.ShippingMethod.GetType().Name}" +" | Order Shipping Cost: " + electronicOrder.CalculateShippingCost());
+     
+        var furnitureOrder = new FurnitureOrder(200, commonShipping);
+        Console.WriteLine(furnitureOrder.SectorName + $" | {furnitureOrder.ShippingMethod.GetType().Name}" +" | Order Shipping Cost: " + furnitureOrder.CalculateShippingCost());
     }
 }
