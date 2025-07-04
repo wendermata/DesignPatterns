@@ -1,7 +1,4 @@
-﻿using DesignPatterns.Strategy;
-using DesignPatterns.TemplateMethod;
-using DesignPatterns.Observer;
-using DesignPatterns.State;
+﻿using DesignPatterns.Behavioral.State;
 
 namespace DesignPatterns;
 
