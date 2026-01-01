@@ -39,7 +39,7 @@ public class FactoryMethodPattern : IPattern
         factory.ProcessAsync(_creditPayment);
         factory.ProcessAsync(_debitPayment);
         
-        //this line will throw an error 'cause defaultFactory doesnt support pix payment
+        //this line will throw an error 'cause defaultFactory doesn't support pix payment
         factory.ProcessAsync(_pixPayment);
     }
 }

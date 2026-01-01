@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Behavioral.State;
+using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Decorator;
@@ -10,7 +11,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        var pattern = new FactoryMethodPattern();
+        var pattern = new AbstractFactoryPattern();
         pattern.Run();
         Console.ReadKey();
     }
